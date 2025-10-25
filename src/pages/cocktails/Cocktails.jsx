@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import { Beer, Droplets, Thermometer, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
