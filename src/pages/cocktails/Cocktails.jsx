@@ -3,6 +3,7 @@ import { Beer, Droplets, Thermometer, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function BreweryLanding() {
+     window.scrollTo(0, 0);
   const [hoveredBeer, setHoveredBeer] = React.useState(null);
 
   const beers = [
@@ -32,7 +33,7 @@ export default function BreweryLanding() {
     { icon: Droplets, title: 'Filtering procedure', desc: 'Advanced filtration systems remove impurities while preserving rich flavors.' },
     { icon: Clock, title: 'Widely Method', desc: 'Time-tested brewing techniques combined with modern innovation.' }
   ];
-   window.scrollTo(0, 0);
+
 
   return (
     <div className="min-h-screen bg-white font-sans overflow-x-hidden">
