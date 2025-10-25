@@ -241,8 +241,8 @@ window.scrollTo(0, 0);
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1 text-sm" style={{ color: '#040472' }}>Phone</h3>
-                    <p className="text-gray-600 text-sm">+1 (555) 123-4567</p>
-                    <p className="text-gray-600 text-sm">+1 (555) 987-6543</p>
+                    <p className="text-gray-600 text-sm">+91 99900 79287</p>
+                    <p className="text-gray-600 text-sm">+91 99900 79287</p>
                   </div>
                 </div>
 
@@ -252,8 +252,8 @@ window.scrollTo(0, 0);
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1 text-sm" style={{ color: '#040472' }}>Email</h3>
-                    <p className="text-gray-600 text-sm">info@company.com</p>
-                    <p className="text-gray-600 text-sm">support@company.com</p>
+                    <p className="text-gray-600 text-sm">info@blukingsdistillers.com</p>
+                    <p className="text-gray-600 text-sm">support@blukingsdistillers.com</p>
                   </div>
                 </div>
 
@@ -263,8 +263,8 @@ window.scrollTo(0, 0);
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1 text-sm" style={{ color: '#040472' }}>Address</h3>
-                    <p className="text-gray-600 text-sm">123 Business Avenue</p>
-                    <p className="text-gray-600 text-sm">New York, NY 10001</p>
+                    <p className="text-gray-600 text-sm">Sector-63 , Noida </p>
+                    <p className="text-gray-600 text-sm">India</p>
                   </div>
                 </div>
               </div>

@@ -15,7 +15,7 @@ const SixthComp = () => {
                 }
             },
             {
-                threshold: 0.2, // Trigger when 20% of the component is visible
+                threshold: 0.2,
                 rootMargin: '-50px 0px'
             }
         );
@@ -70,9 +70,9 @@ const SixthComp = () => {
                                 style={{ transitionDelay: '0.6s' }}
                             >
                                 <span className="text-white text-[1.25vw] font-semibold text-justify">
-                                    Mr. Saurabh Singh 
+                                    Mr. XYZ
                                 </span>
-                                , founded Vrinda LandScaping House with a passion for sustainability and a commitment to enhancing the environment.Plants purify the air, uplift our moods, and create a sense of tranquility that is invaluable in today's fast-paced world
+                                , the visionary founder of Blu Kings Distillers, embarked on this journey with a single purpose — to craft whisky that reflects authenticity, legacy, and craftsmanship. Each bottle tells a story of passion and perfection.
                             </p>
                             <p 
                                 className={`w-[46.333vw] text-[#c3c3c3] text-[1.25vw] font-normal mb-[1.25vw] text-justify transition-all duration-1000 ease-out ${
@@ -82,7 +82,7 @@ const SixthComp = () => {
                                 }`}
                                 style={{ transitionDelay: '0.8s' }}
                             >
-                                Through our wide variety of plants, gardening solutions, and expert guidance, we aim to make greenery accessible to all.We take pride in offering healthy, high-quality plants along with the knowledge and care tips needed to nurture them.
+                                Blu Kings Distillers celebrates the rich heritage of whisky-making while embracing modern innovation. From meticulous grain selection to aging in premium barrels — we ensure every sip delivers unmatched smoothness and character.
                             </p>
                             <p 
                                 className={`w-[46.333vw] text-[#c3c3c3] text-[1.25vw] font-normal text-justify mb-[3.5vw] transition-all duration-1000 ease-out ${
@@ -92,7 +92,7 @@ const SixthComp = () => {
                                 }`}
                                 style={{ transitionDelay: '1s' }}
                             >
-                                Whether you're an experienced gardener or just beginning your journey, our team is dedicated to helping you find the perfect plants that suit your lifestyle.
+                                Our mission is simple — to provide whisky lovers with a refined drinking experience that feels bold, proud, and unforgettable. Whether shared in celebration or enjoyed in quiet moments, Blu Kings is crafted to elevate every occasion.
                             </p>
                              <h6 
                                 className={`w-[46.333vw] text-[#c3c3c3] text-[1.5vw] font-bold text-justify transition-all duration-1000 ease-out ${
@@ -102,7 +102,7 @@ const SixthComp = () => {
                                 }`}
                                 style={{ transitionDelay: '1.2s' }}
                             >
-                                -Landscaping with the blessing of Vrinda
+                                - Crafted with Pride, Distilled for the Bold
                              </h6>
                         </div>
                         <div 
@@ -145,9 +145,9 @@ const SixthComp = () => {
                         style={{ transitionDelay: '0.4s' }}
                     >
                         <span className='text-[#372e32] text-base font-semibold'>
-                            Mr. Saurabh Singh
+                            Mr. XYZ
                         </span>
-                        , founded Vrinda LandScaping House with a passion for sustainability and a commitment to enhancing the environment.
+                        , the founder of Blu Kings Distillers, is driven by dedication to quality and the art of fine whisky-making.
                     </p>
                     <p 
                         className={`text-[#5a5a5a] text-[3.765vw] font-normal mb-[3.529vw] w-[85vw] text-justify transition-all duration-1000 ease-out ${
@@ -157,7 +157,7 @@ const SixthComp = () => {
                         }`}
                         style={{ transitionDelay: '0.6s' }}
                     >
-                        Plants purify the air, uplift our moods, and create a sense of tranquility that is invaluable in today's fast-paced world. Through our wide variety of plants, gardening solutions, and expert guidance, we aim to make greenery accessible to all.
+                        Blu Kings represents a balance of tradition and innovation — carefully distilled and aged to deliver a rich, smooth, and bold whisky that stands out in every pour.
                     </p>
                     <p 
                         className={`text-[#5a5a5a] text-[3.765vw] font-normal w-[85vw] mb-[3.529vw] text-justify transition-all duration-1000 ease-out ${
@@ -167,7 +167,7 @@ const SixthComp = () => {
                         }`}
                         style={{ transitionDelay: '0.8s' }}
                     >
-                        We take pride in offering healthy, high-quality plants along with the knowledge and care tips needed to nurture them.
+                        Every bottle is a mark of precision and passion, crafted to elevate your celebrations, connections, and unforgettable moments.
                     </p>
                 </div>
                 <div 
