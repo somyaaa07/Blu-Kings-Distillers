@@ -74,7 +74,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <Link to="/products/beer" className="text-blue-100 hover:text-white transition-colors duration-200 text-sm sm:text-base">
+                <Link to="/products/beers" className="text-blue-100 hover:text-white transition-colors duration-200 text-sm sm:text-base">
                   Beers
                 </Link>
               </li>
