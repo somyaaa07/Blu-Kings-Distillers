@@ -3,7 +3,10 @@ import { Beer, Droplets, Thermometer, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function BreweryLanding() {
-     window.scrollTo(0, 0);
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const [hoveredBeer, setHoveredBeer] = React.useState(null);
 
   const beers = [
