@@ -1,6 +1,7 @@
 import React from 'react';
 
 const WhiskyMakingProcess = () => {
+   window.scrollTo(0, 0);
   const processSteps = [
     {
       step: 1,
@@ -57,7 +58,7 @@ const WhiskyMakingProcess = () => {
       details: ["Selection", "Dilution", "Bottling"]
     }
   ];
- window.scrollTo(0, 0);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
