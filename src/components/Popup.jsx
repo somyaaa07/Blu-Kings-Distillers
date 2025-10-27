@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Lock, ShieldCheck, AlertCircle } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Lock, AlertCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function AgeVerificationPopup({ onVerified }) {
@@ -9,7 +9,7 @@ export default function AgeVerificationPopup({ onVerified }) {
   console.log('AgeVerificationPopup rendered');
 
   // Prevent ESC key and F5 from closing popup
-  React.useEffect(() => {
+  useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape' || e.key === 'F5' || (e.ctrlKey && e.key === 'r')) {
         e.preventDefault();
@@ -25,20 +25,42 @@ export default function AgeVerificationPopup({ onVerified }) {
   }, []);
 
   const handleYes = () => {
+    console.log('Yes button clicked');
     setShowError(false);
-    // Store age verification in localStorage
-    localStorage.setItem('ageVerified', 'true');
-    // Notify parent component that verification is complete
-    if (onVerified) {
-      onVerified();
+    
+    try {
+      // Store age verification in localStorage
+      localStorage.setItem('ageVerified', 'true');
+      console.log('Age verified, localStorage set to:', localStorage.getItem('ageVerified'));
+      
+      // Notify parent component that verification is complete
+      if (onVerified) {
+        console.log('Calling onVerified callback');
+        onVerified();
+      } else {
+        console.error('onVerified callback is not defined');
+      }
+    } catch (error) {
+      console.error('Error in handleYes:', error);
     }
   };
 
   const handleNo = () => {
+    console.log('No button clicked');
     setShowError(true);
+    
+    // Remove any existing age verification
+    localStorage.removeItem('ageVerified');
+    
     // Navigate to privacy policy page after showing error for 2 seconds
     setTimeout(() => {
+      console.log('Navigating to privacy policy');
       navigate('/privacy-policy');
+      
+      // Also call onVerified to close the popup before navigation
+      if (onVerified) {
+        onVerified();
+      }
     }, 2000);
   };
 
@@ -103,7 +125,7 @@ export default function AgeVerificationPopup({ onVerified }) {
 
           {/* Error message */}
           {showError && (
-            <div className="rounded-xl p-4 flex items-start gap-3 " style={{ backgroundColor: 'rgba(4, 4, 114, 0.2)' }}>
+            <div className="rounded-xl p-4 flex items-start gap-3" style={{ backgroundColor: 'rgba(4, 4, 114, 0.2)' }}>
               <AlertCircle className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#040472' }} />
               <div>
                 <p className="text-white font-semibold mb-1">Access Denied</p>

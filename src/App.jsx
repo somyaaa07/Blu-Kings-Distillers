@@ -61,7 +61,12 @@ function App() {
   <Router>
     {/* If age verification is required, show the popup and block all content */}
     {showAgeVerification ? (
-      <AgeVerificationPopup onVerified={() => setShowAgeVerification(true)} />
+      <AgeVerificationPopup 
+        onVerified={() => {
+          console.log('onVerified called, hiding popup');
+          setShowAgeVerification(false);
+        }} 
+      />
     ) : (
       <>
         <Navbar />
