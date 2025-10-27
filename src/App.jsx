@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
@@ -30,15 +30,42 @@ import TermsAndConditions from './pages/terms&conditions/TermsAndConditions'
 import PrivacyPolicy from './pages/privacy-and-policy/Privacy-and-Policy'
 import Blog from './pages/blog/Blog'
 import BlogDetail from './pages/blog/BlogDetail'
+import AgeVerificationPopup from './components/Popup'
 
 function App() {
- 
+  // Initialize state by checking localStorage immediately
+  // This prevents the flash/disappearance issue
+  const [showAgeVerification, setShowAgeVerification] = useState(() => {
+    try {
+      const ageVerified = localStorage.getItem('ageVerified');
+      console.log('Initial age verification check:', ageVerified);
+      // Show popup if NOT verified (null, undefined, or anything other than 'true')
+      const shouldShow = ageVerified !== 'true';
+      console.log('Should show popup:', shouldShow);
+      return shouldShow;
+    } catch (error) {
+      console.error('Error reading localStorage:', error);
+      // Default to showing popup if there's an error
+      return true;
+    }
+  });
+
+  // Debug logging
+  useEffect(() => {
+    console.log('Current age verification status:', showAgeVerification);
+    console.log('LocalStorage value:', localStorage.getItem('ageVerified'));
+  }, [showAgeVerification]);
 
   return (
   <>
   <Router>
-     <Navbar />
-    <Routes>
+    {/* If age verification is required, show the popup and block all content */}
+    {showAgeVerification ? (
+      <AgeVerificationPopup onVerified={() => setShowAgeVerification(true)} />
+    ) : (
+      <>
+        <Navbar />
+        <Routes>
       <Route path="/" element={<div>
        
         <HeroSection />
@@ -102,9 +129,12 @@ function App() {
               <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
               <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
+
       
-    </Routes>
-  <Footer />
+        </Routes>
+        <Footer />
+      </>
+    )}
   </Router>
 
   </>
